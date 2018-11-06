@@ -34,6 +34,16 @@ script:
 
 - ballerina version
 
+- MB_VERSION=0.970.5
+
+- MB_DISTRIBUTION=message-broker-${MB_VERSION}.zip
+
+- wget https://github.com/ballerina-platform/ballerina-message-broker/releases/download/v${MB_VERSION}/${MB_DISTRIBUTION}
+
+- unzip ${MB_DISTRIBUTION}
+
+- export PATH=${PATH}:$(pwd)/${MB_DISTRIBUTION}/bin
+
 - cd guide
 
 - ballerina init
