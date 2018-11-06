@@ -40,7 +40,11 @@ script:
 
 - wget https://github.com/ballerina-platform/ballerina-message-broker/releases/download/v${MB_VERSION}/${MB_DISTRIBUTION}
 
-- unzip ${MB_DISTRIBUTION}
+- unzip -q ${MB_DISTRIBUTION}
+
+- tree
+
+- ls
 
 - export PATH=${PATH}:$(pwd)/${MB_DISTRIBUTION}/bin
 
